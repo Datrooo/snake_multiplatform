@@ -1,4 +1,4 @@
-package com.datrooo.snake.game.engine
+package com.datrooo.snake.core.engine
 
 import com.datrooo.snake.core.model.PlayerId
 

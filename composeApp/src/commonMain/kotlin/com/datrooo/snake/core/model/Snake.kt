@@ -29,7 +29,7 @@ data class Snake(
         height: Int,
         grow: Boolean
     ): Snake {
-        val newHead = head.moveWrapped(
+        val newHead = head.movedWrapped(
             direction = nextDirection,
             width = width,
             height = height

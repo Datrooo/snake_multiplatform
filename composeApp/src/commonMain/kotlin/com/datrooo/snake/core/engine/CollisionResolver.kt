@@ -4,7 +4,6 @@ import com.datrooo.snake.core.model.Coord
 import com.datrooo.snake.core.model.PlayerId
 import com.datrooo.snake.core.model.Snake
 import com.datrooo.snake.core.model.SnakeState
-import com.datrooo.snake.game.engine.CollisionResult
 
 class CollisionResolver {
 

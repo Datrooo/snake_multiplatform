@@ -9,8 +9,8 @@ class FoodSpawner(
 ) {
 
     fun ensureFood(state: GameState): Set<Coord> {
-        val targetFoodCount = state.config.getTotalFood(
-            playersCount = state.aliveSnakes.size
+        val targetFoodCount = state.config.targetFoodCount(
+            aliveSnakes = state.aliveSnakes.size
         )
 
         if (state.foods.size >= targetFoodCount) {

@@ -27,7 +27,7 @@ class GameEngine(
         }
 
         val ateFood = activeSnakes.associate { snake ->
-            val nextHead = snake.head.moveWrapped(
+            val nextHead = snake.head.movedWrapped(
                 direction = snake.nextDirection,
                 width = config.width,
                 height = config.height
@@ -38,7 +38,7 @@ class GameEngine(
 
         val eatenFoodCells = activeSnakes
             .mapNotNull { snake ->
-                val nextHead = snake.head.moveWrapped(
+                val nextHead = snake.head.movedWrapped(
                     direction = snake.nextDirection,
                     width = config.width,
                     height = config.height
@@ -99,7 +99,7 @@ class GameEngine(
             foods = foodSpawner.spawnFromDeadSnake(
                 currentFoods = foods,
                 deadSnake = deadSnake,
-                deadFoodProbability = config.deadFoodProb
+                deadFoodProbability = config.deadFoodProbability
             )
         }
 
@@ -178,8 +178,8 @@ class GameEngine(
 
                     if (snake != null && snake.state == SnakeState.Alive) {
                         updatedSnakes = updatedSnakes + (
-                                command.playerId to snake.withNextDirection(command.direction)
-                                )
+                            command.playerId to snake.withNextDirection(command.direction)
+                        )
                     }
                 }
             }
